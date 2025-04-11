@@ -5,26 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="calculator.ico?" type="image/x-icon" />
+    <link rel="shortcut icon" href="calculator.png" type="image/x-icon" />
   </head>
   <body>
     <div class="header">Calculator</div>
     <div class="calculator-container">
       <div class="calculator-output-container">
-        <div class="calculator-output"><span>10 + 10</span></div>
+        <div class="calculator-output"><span></span></div>
       </div>
       <div class="row">
-        <button>7</button><button>8</button><button>9</button><button>+</button>
+        <button data-number>7</button><button data-number>8</button><button data-number>9</button><button class="operator" data-operator>+</button>
       </div>
       <div class="row">
-        <button>4</button><button>5</button><button>6</button><button>-</button>
+        <button data-number>4</button><button data-number>5</button><button data-number>6</button><button class="operator" data-operator>-</button>
       </div>
       <div class="row">
-        <button>1</button><button>2</button><button>3</button><button>x</button>
+        <button data-number>1</button><button data-number>2</button><button data-number>3</button><button class="operator" data-operator>x</button>
       </div>
       <div class="row">
-        <button>C</button><button>0</button
-        ><button class="equal-button">=</button><button>/</button>
+        <button class="clear-button">C</button><button data-number>0</button
+        ><button class="equal-button">=</button><button class="operator" data-operator>/</button>
       </div>
     </div>
     <div class="footer">Copyright © Santos Novoa 2025</div>
