@@ -41,7 +41,8 @@ operatorBtns.forEach(button => {
 
 equalsBtn.addEventListener("click", () => {
   numTwo = parseInt(screen.textContent);
-  screen.textContent = operate(currentOperator, numOne, numTwo);
+  const result = operate(currentOperator, numOne, numTwo);
+  screen.textContent = result;
 })
 
 function appendNumber(number) {
@@ -72,30 +73,20 @@ function divide(numOne, numTwo) {
 }
 
 function operate(operator, numOne, numTwo) {
-  result = 0;
   switch (operator) {
     case "+":
-      result += add(numOne, numTwo);
-      screen.textContent = result;
-      break;
+      return add(numOne, numTwo);
     case "-":
-      result += subtract(numOne, numTwo);
-      screen.textContent = result;
-      break;
+      return subtract(numOne, numTwo);
     case "x":
-      result += multiply(numOne, numTwo);
-      screen.textContent = result;
-      break;
+      return multiply(numOne, numTwo);
     case "/":
       if (numTwo === 0) {
-        screen.textContent = "Error.";
+        return "Error.";
       } else {
-        result += divide(numOne, numTwo);
-        screen.textContent = result.toFixed(2);
+        return divide(numOne, numTwo).toFixed(2);
       }
-      break;
   }
-  return result;
 }
 
 // operate("+", 40, 6)
