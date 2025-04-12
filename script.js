@@ -22,6 +22,7 @@ clearBtn.addEventListener("click", () => {
   result = 0;
   numOne = 0;
   numTwo = 0;
+  resultDisplayed = false;
   console.log(result);
 })
 
@@ -48,7 +49,7 @@ equalsBtn.addEventListener("click", () => {
 
 function appendNumber(number) {
   if (resultDisplayed) {
-  screen.textContent += number;
+  screen.textContent = number;
   resultDisplayed = false;
   } else {
     screen.textContent += number;
