@@ -12,7 +12,7 @@ let numOne;
 let numTwo;
 let currentOperator;
 let result;
-
+let resultDisplayed = false;
 
 
 
@@ -43,10 +43,16 @@ equalsBtn.addEventListener("click", () => {
   numTwo = parseInt(screen.textContent);
   const result = operate(currentOperator, numOne, numTwo);
   screen.textContent = result;
+  resultDisplayed = true;
 })
 
 function appendNumber(number) {
+  if (resultDisplayed) {
   screen.textContent += number;
+  resultDisplayed = false;
+  } else {
+    screen.textContent += number;
+  }
 }
 
 function setOperator(operator) {
@@ -84,7 +90,7 @@ function operate(operator, numOne, numTwo) {
       if (numTwo === 0) {
         return "Error.";
       } else {
-        return divide(numOne, numTwo).toFixed(2);
+        return divide(numOne, numTwo)
       }
   }
 }
