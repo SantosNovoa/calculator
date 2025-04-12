@@ -18,7 +18,6 @@ A simple and responsive web-based calculator that performs basic arithmetic oper
 ## 📸 Screenshot
 
 ![Calculator Screenshot](calcpreview.png)  
-> Replace `screenshot.png` with your actual screenshot file placed in the same directory.
 
 ---
 
