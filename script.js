@@ -36,6 +36,7 @@ numBtns.forEach(button => {
 operatorBtns.forEach(button => {
   button.addEventListener("click", () => {
     setOperator(button.textContent);
+    button.style.backgroundColor = "green";
   })
 })
 
@@ -45,6 +46,9 @@ equalsBtn.addEventListener("click", () => {
   const result = operate(currentOperator, numOne, numTwo);
   screen.textContent = result;
   resultDisplayed = true;
+  operatorBtns.forEach(button => {
+    button.style.backgroundColor = "#a7a7a7";
+  });
 })
 
 function appendNumber(number) {
