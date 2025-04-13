@@ -24,6 +24,9 @@ clearBtn.addEventListener("click", () => {
   numTwo = 0;
   resultDisplayed = false;
   console.log(result);
+  operatorBtns.forEach(button => {
+    button.style.backgroundColor = "#a7a7a7";
+  });
 })
 
 
